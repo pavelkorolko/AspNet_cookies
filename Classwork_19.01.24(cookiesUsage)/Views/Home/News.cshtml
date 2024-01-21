@@ -1,0 +1,30 @@
+﻿@using Classwork_19._01._24_cookiesUsage_.Helpers;
+
+@{
+    ViewData["Title"] = "News";
+}
+
+@model List<News>
+
+
+@*//1
+@if(@ViewBag.Color.Length > 0)
+{
+    <style>
+        .mybackground{
+            background-color: @ViewBag.Color;
+        }
+    </style>
+}
+*@
+
+<div class="m-2">
+    <table class="table table-hover">
+        @Html.CreateTable(@Model)
+    </table>
+</div>
+
+<div>
+    <a class="btn btn-primary w-100" href="~/home/readercolor" role="button">Change background</a>
+</div>
+

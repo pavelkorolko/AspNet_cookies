@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "Background";
+}
+
+@*//1
+@if (@ViewBag.Color.Length > 0)
+{
+    <style>
+        .mybackground {
+            background-color: @ViewBag.Color;
+        }
+    </style>
+}
+*@
+
+
+<form method="post" action="~/home/readercolor">
+    <p>Select background color:</p>
+    <select class="form-select mt-3" name="color">
+        <option selected>Choose color...</option>
+        <option value="yellow">Yellow</option>
+        <option value="blue">Blue</option>
+        <option value="write">Write</option>
+    </select>
+    <button type="submit" class="btn btn-primary w-100 mt-3">Send</button>
+</form>
+

@@ -1,0 +1,14 @@
+﻿@using  Classwork_19._01._24_cookiesUsage_.Helpers;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<User>
+
+<div class="m-2">
+    <p>Select user to continue...</p>
+    <table class="table table-hover">
+        @Html.CreateTable(@Model)
+    </table>
+</div>
